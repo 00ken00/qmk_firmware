@@ -193,6 +193,8 @@ void oled_task_user(void) {
         oled_render_logo();
     }
 }
+#endif // OLED_DRIVER_ENABLE
+
 
 // ref: https://okapies.hateblo.jp/entry/2019/02/02/133953
 static bool lower_pressed = false;
@@ -262,4 +264,3 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   }
   return fire_lang1_lang2(keycode, record);
 }
-#endif // OLED_DRIVER_ENABLE
