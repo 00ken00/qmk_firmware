@@ -91,7 +91,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 };
 
 
-#ifdef OLED_DRIVER_ENABLE
+#ifdef OLED_ENABLE
 oled_rotation_t oled_init_user(oled_rotation_t rotation) {
   if (!is_master) {
     return OLED_ROTATION_180;  // flips the display 180 degrees if offhand
@@ -193,7 +193,7 @@ void oled_task_user(void) {
         oled_render_logo();
     }
 }
-#endif // OLED_DRIVER_ENABLE
+#endif // OLED_ENABLE
 
 
 // ref: https://okapies.hateblo.jp/entry/2019/02/02/133953
